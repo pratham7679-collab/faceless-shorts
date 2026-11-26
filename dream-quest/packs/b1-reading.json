@@ -1,0 +1,226 @@
+{
+  "format": 1,
+  "id": "b1.reading",
+  "version": "1.0.0",
+  "kind": "skills",
+  "band": 1,
+  "minApp": "1.0.0",
+  "engines": ["phonics", "build"],
+  "title": "Explorer reading & phonics: Word Woods",
+
+  "data": {
+    "sounds": {
+      "b": "buh", "c": "kuh", "d": "duh", "f": "fff", "g": "guh", "h": "huh", "j": "juh", "k": "kuh",
+      "l": "lll", "m": "mmm", "n": "nnn", "p": "puh", "r": "rrr", "s": "sss", "t": "tuh", "v": "vvv",
+      "w": "wuh", "y": "yuh", "z": "zzz", "x": "ks",
+      "a": "short a, like in apple", "e": "short e, like in egg", "i": "short i, like in igloo",
+      "o": "short o, like in octopus", "u": "short u, like in umbrella",
+      "sh": "shhh", "ch": "ch", "th": "th", "ck": "kuh", "ll": "lll", "ss": "sss", "ar": "ar"
+    },
+    "lookAlike": [["b", "d", "p"], ["m", "n"], ["f", "v"], ["s", "z"], ["c", "k", "g"], ["t", "d"]],
+    "lexicon": [
+      { "w": "cat",   "p": "🐱", "t": ["cvc"], "r": "at" },
+      { "w": "hat",   "p": "🎩", "t": ["cvc"], "r": "at" },
+      { "w": "bat",   "p": "🦇", "t": ["cvc"], "r": "at" },
+      { "w": "rat",   "p": "🐀", "t": ["cvc"], "r": "at" },
+      { "w": "map",   "p": "🗺️", "t": ["cvc"], "r": "ap" },
+      { "w": "cap",   "p": "🧢", "t": ["cvc"], "r": "ap" },
+      { "w": "van",   "p": "🚐", "t": ["cvc"] },
+      { "w": "bag",   "p": "👜", "t": ["cvc"] },
+      { "w": "yam",   "p": "🍠", "t": ["cvc"] },
+      { "w": "dog",   "p": "🐶", "t": ["cvc"], "r": "og" },
+      { "w": "log",   "p": "🪵", "t": ["cvc"], "r": "og" },
+      { "w": "fox",   "p": "🦊", "t": ["cvc"], "r": "ox" },
+      { "w": "box",   "p": "📦", "t": ["cvc"], "r": "ox" },
+      { "w": "pot",   "p": "🍲", "t": ["cvc"] },
+      { "w": "hen",   "p": "🐔", "t": ["cvc"], "r": "en" },
+      { "w": "pen",   "p": "🖊️", "t": ["cvc"], "r": "en" },
+      { "w": "ten",   "p": "🔟", "t": ["cvc"], "r": "en" },
+      { "w": "bed",   "p": "🛏️", "t": ["cvc"], "r": "ed" },
+      { "w": "web",   "p": "🕸️", "t": ["cvc"] },
+      { "w": "net",   "p": "🥅", "t": ["cvc"] },
+      { "w": "pig",   "p": "🐷", "t": ["cvc"] },
+      { "w": "pin",   "p": "📌", "t": ["cvc"] },
+      { "w": "bus",   "p": "🚌", "t": ["cvc"] },
+      { "w": "sun",   "p": "☀️", "t": ["cvc"] },
+      { "w": "nut",   "p": "🥜", "t": ["cvc"], "r": "ut" },
+      { "w": "hut",   "p": "🛖", "t": ["cvc"], "r": "ut" },
+      { "w": "bug",   "p": "🐛", "t": ["cvc"], "r": "ug" },
+      { "w": "mug",   "p": "☕", "t": ["cvc"], "r": "ug" },
+      { "w": "tub",   "p": "🛁", "t": ["cvc"] },
+
+      { "w": "frog",  "p": "🐸", "t": ["blend"], "r": "og" },
+      { "w": "crab",  "p": "🦀", "t": ["blend"] },
+      { "w": "star",  "p": "⭐", "t": ["blend"], "r": "ar", "g": "s|t|ar" },
+      { "w": "drum",  "p": "🥁", "t": ["blend"] },
+      { "w": "flag",  "p": "🚩", "t": ["blend"] },
+      { "w": "sled",  "p": "🛷", "t": ["blend"], "r": "ed" },
+      { "w": "tent",  "p": "⛺", "t": ["blend"] },
+      { "w": "milk",  "p": "🥛", "t": ["blend"] },
+      { "w": "hand",  "p": "✋", "t": ["blend"] },
+      { "w": "gift",  "p": "🎁", "t": ["blend"] },
+      { "w": "plant", "p": "🪴", "t": ["blend"] },
+      { "w": "skunk", "p": "🦨", "t": ["blend"] },
+
+      { "w": "ship",  "p": "🚢", "t": ["digraph"], "g": "sh|i|p" },
+      { "w": "fish",  "p": "🐟", "t": ["digraph"], "g": "f|i|sh", "r": "ish" },
+      { "w": "shell", "p": "🐚", "t": ["digraph"], "g": "sh|e|ll", "r": "ell" },
+      { "w": "chick", "p": "🐤", "t": ["digraph"], "g": "ch|i|ck" },
+      { "w": "duck",  "p": "🦆", "t": ["digraph"], "g": "d|u|ck" },
+      { "w": "sock",  "p": "🧦", "t": ["digraph"], "g": "s|o|ck", "r": "ock" },
+      { "w": "lock",  "p": "🔒", "t": ["digraph"], "g": "l|o|ck", "r": "ock" },
+      { "w": "chess", "p": "♟️", "t": ["digraph"], "g": "ch|e|ss" },
+      { "w": "shark", "p": "🦈", "t": ["digraph"], "g": "sh|ar|k" },
+
+      { "w": "cake",  "p": "🎂", "t": ["silente"], "r": "ake" },
+      { "w": "kite",  "p": "🪁", "t": ["silente"] },
+      { "w": "bone",  "p": "🦴", "t": ["silente"] },
+      { "w": "cube",  "p": "🧊", "t": ["silente"] },
+      { "w": "nose",  "p": "👃", "t": ["silente"], "r": "ose" },
+      { "w": "rose",  "p": "🌹", "t": ["silente"], "r": "ose" },
+      { "w": "dice",  "p": "🎲", "t": ["silente"] },
+      { "w": "snake", "p": "🐍", "t": ["silente"], "r": "ake" },
+      { "w": "grape", "p": "🍇", "t": ["silente"] },
+      { "w": "bike",  "p": "🚲", "t": ["silente"] },
+      { "w": "skate", "p": "⛸️", "t": ["silente"] },
+      { "w": "whale", "p": "🐳", "t": ["silente"], "g": "wh|a|l|e" },
+
+      { "w": "car",   "p": "🚗", "t": ["rhyme"], "r": "ar" },
+      { "w": "jar",   "p": "🫙", "t": ["rhyme"], "r": "ar" },
+      { "w": "bee",   "p": "🐝", "t": ["rhyme"], "r": "ee" },
+      { "w": "tree",  "p": "🌳", "t": ["rhyme"], "r": "ee" },
+      { "w": "goat",  "p": "🐐", "t": ["rhyme"], "r": "oat" },
+      { "w": "boat",  "p": "⛵", "t": ["rhyme"], "r": "oat" },
+      { "w": "coat",  "p": "🧥", "t": ["rhyme"], "r": "oat" },
+      { "w": "mouse", "p": "🐭", "t": ["rhyme"], "r": "ouse" },
+      { "w": "house", "p": "🏡", "t": ["rhyme"], "r": "ouse" },
+      { "w": "bear",  "p": "🐻", "t": ["rhyme"], "r": "air" },
+      { "w": "pear",  "p": "🍐", "t": ["rhyme"], "r": "air" },
+      { "w": "chair", "p": "🪑", "t": ["rhyme"], "r": "air" },
+      { "w": "moon",  "p": "🌙", "t": ["rhyme"], "r": "oon" },
+      { "w": "spoon", "p": "🥄", "t": ["rhyme"], "r": "oon" },
+      { "w": "dish",  "p": "🍽️", "t": ["rhyme"], "r": "ish" },
+      { "w": "bell",  "p": "🔔", "t": ["rhyme"], "r": "ell" }
+    ],
+    "examples": {
+      "b": "ball", "c": "cookie", "d": "dinosaur", "f": "feather", "g": "garden", "h": "happy", "j": "jelly",
+      "k": "kangaroo", "l": "lemon", "m": "moon", "n": "nest", "p": "puddle", "r": "rainbow", "s": "sock",
+      "t": "turtle", "v": "violin", "w": "wagon", "y": "yo-yo", "z": "zebra", "x": "fox",
+      "sh": "shoe", "ch": "cheese", "ck": "duck", "ll": "bell", "ss": "kiss", "ar": "farm", "th": "thumb"
+    },
+    "sightWords": {
+      "1": [
+        { "w": "the",  "s": "The cat sat on the mat." },
+        { "w": "and",  "s": "Pip and Moss play." },
+        { "w": "to",   "s": "We go to the hill." },
+        { "w": "is",   "s": "The moon is big." },
+        { "w": "it",   "s": "Can you see it?" },
+        { "w": "in",   "s": "The fish is in the pond." },
+        { "w": "you",  "s": "I see you!" },
+        { "w": "my",   "s": "This is my hat." },
+        { "w": "see",  "s": "I see the stars." },
+        { "w": "we",   "s": "We can hop." },
+        { "w": "can",  "s": "I can run fast." },
+        { "w": "go",   "s": "Ready, set, go!" },
+        { "w": "up",   "s": "Look up at the sky." },
+        { "w": "look", "s": "Look at the lantern." },
+        { "w": "me",   "s": "Come with me." }
+      ],
+      "2": [
+        { "w": "said",   "s": "Pip said hello." },
+        { "w": "was",    "s": "It was a sunny day." },
+        { "w": "are",    "s": "We are friends." },
+        { "w": "he",     "s": "He can swim." },
+        { "w": "she",    "s": "She can jump." },
+        { "w": "they",   "s": "They play in the woods." },
+        { "w": "have",   "s": "I have a red kite." },
+        { "w": "like",   "s": "I like stories." },
+        { "w": "come",   "s": "Come and see!" },
+        { "w": "here",   "s": "Come over here." },
+        { "w": "this",   "s": "This is fun." },
+        { "w": "what",   "s": "What is that?" },
+        { "w": "with",   "s": "Play with me." },
+        { "w": "play",   "s": "Let's play a game." },
+        { "w": "little", "s": "A little bug crawls by." }
+      ],
+      "3": [
+        { "w": "there",   "s": "Look over there." },
+        { "w": "where",   "s": "Where is Pip?" },
+        { "w": "want",    "s": "I want a snack." },
+        { "w": "could",   "s": "Could you help me?" },
+        { "w": "would",   "s": "Would you like to play?" },
+        { "w": "because", "s": "I smile because I am happy." },
+        { "w": "friend",  "s": "Moss is my friend." },
+        { "w": "again",   "s": "Read it again!" },
+        { "w": "every",   "s": "Every star shines." },
+        { "w": "many",    "s": "Many bees buzz." },
+        { "w": "once",    "s": "Once upon a time." },
+        { "w": "know",    "s": "I know the way home." }
+      ]
+    }
+  },
+
+  "skills": [
+    {
+      "id": "read.sounds", "domain": "reading", "area": "word-woods", "engine": "phonics",
+      "name": "Sound Match", "art": "ear", "intro": "Listen for the sound, then find the picture.",
+      "requires": [],
+      "levels": [
+        { "n": 1, "band": 1, "label": "Hears first sounds (3 pictures)",       "params": { "mode": "begin", "choices": 3, "pool": ["cvc"] } },
+        { "n": 2, "band": 1, "label": "First sounds that sound alike",         "params": { "mode": "begin", "choices": 3, "similar": true, "pool": ["cvc"] } },
+        { "n": 3, "band": 1, "label": "First sounds with 4 pictures",          "params": { "mode": "begin", "choices": 4, "pool": ["cvc", "blend", "silente"] } },
+        { "n": 4, "band": 1, "label": "Hears ending sounds",                   "params": { "mode": "end", "choices": 3, "pool": ["cvc"] } },
+        { "n": 5, "band": 1, "label": "Hears short vowels in the middle",      "params": { "mode": "vowel", "choices": 3, "pool": ["cvc"] } },
+        { "n": 6, "band": 1, "label": "Short vowels with 4 pictures",          "params": { "mode": "vowel", "choices": 4, "pool": ["cvc"] } }
+      ]
+    },
+    {
+      "id": "read.rhyme", "domain": "reading", "area": "word-woods", "engine": "phonics",
+      "name": "Rhyme Time", "art": "bells", "intro": "Words that rhyme sound the same at the end.",
+      "requires": [],
+      "levels": [
+        { "n": 1, "band": 1, "label": "Hears rhymes (2 pictures)",            "params": { "mode": "rhyme", "choices": 2 } },
+        { "n": 2, "band": 1, "label": "Hears rhymes (3 pictures)",            "params": { "mode": "rhyme", "choices": 3 } },
+        { "n": 3, "band": 1, "label": "Reads rhyming words (3 words)",        "params": { "mode": "rhyme", "choices": 3, "words": true } },
+        { "n": 4, "band": 1, "label": "Reads rhyming words (4 words)",        "params": { "mode": "rhyme", "choices": 4, "words": true } }
+      ]
+    },
+    {
+      "id": "read.sight", "domain": "reading", "area": "word-woods", "engine": "phonics",
+      "name": "Sight Word Lanterns", "art": "lanternword", "intro": "Find the word on the lanterns.",
+      "requires": [],
+      "levels": [
+        { "n": 1, "band": 1, "label": "First sight words (3 lanterns)",       "params": { "mode": "sight", "list": "1", "choices": 3 } },
+        { "n": 2, "band": 1, "label": "First sight words (4 lanterns)",       "params": { "mode": "sight", "list": "1", "choices": 4 } },
+        { "n": 3, "band": 1, "label": "Next sight words (said, they, what)",  "params": { "mode": "sight", "list": "2", "choices": 3 } },
+        { "n": 4, "band": 1, "label": "Next sight words (4 lanterns)",        "params": { "mode": "sight", "list": "2", "choices": 4 } },
+        { "n": 5, "band": 1, "label": "Tricky sight words (because, friend)", "params": { "mode": "sight", "list": "3", "choices": 4 } }
+      ]
+    },
+    {
+      "id": "read.decode", "domain": "reading", "area": "word-woods", "engine": "phonics",
+      "name": "Read & Find", "art": "book", "intro": "Read the word by yourself, then find its picture.",
+      "requires": [{ "skill": "read.sounds", "level": 1 }],
+      "levels": [
+        { "n": 1, "band": 1, "label": "Reads 3-letter words (2 pictures)",    "params": { "mode": "decode", "choices": 2, "pool": ["cvc"] } },
+        { "n": 2, "band": 1, "label": "Reads 3-letter words (3 pictures)",    "params": { "mode": "decode", "choices": 3, "pool": ["cvc"], "similar": true } },
+        { "n": 3, "band": 1, "label": "Reads blends like frog and drum",      "params": { "mode": "decode", "choices": 3, "pool": ["blend"] } },
+        { "n": 4, "band": 1, "label": "Reads sh, ch and ck words",            "params": { "mode": "decode", "choices": 3, "pool": ["digraph"] } },
+        { "n": 5, "band": 1, "label": "Reads magic-e words like cake",        "params": { "mode": "decode", "choices": 3, "pool": ["silente"] } },
+        { "n": 6, "band": 1, "label": "Reads all word kinds (4 pictures)",    "params": { "mode": "decode", "choices": 4, "pool": ["cvc", "blend", "digraph", "silente"] } }
+      ]
+    },
+    {
+      "id": "read.build", "domain": "reading", "area": "word-woods", "engine": "build",
+      "name": "Word Builder", "art": "blocks", "intro": "Build the word with letter stones.",
+      "requires": [{ "skill": "read.sounds", "level": 1 }],
+      "levels": [
+        { "n": 1, "band": 1, "label": "Builds 3-letter words",                "params": { "pool": ["cvc"], "extras": 0 } },
+        { "n": 2, "band": 1, "label": "Builds 3-letter words with extra stones", "params": { "pool": ["cvc"], "extras": 2 } },
+        { "n": 3, "band": 1, "label": "Builds blend words",                   "params": { "pool": ["blend"], "extras": 1 } },
+        { "n": 4, "band": 1, "label": "Builds sh, ch and ck words",           "params": { "pool": ["digraph"], "extras": 2 } },
+        { "n": 5, "band": 1, "label": "Builds magic-e words",                 "params": { "pool": ["silente"], "extras": 2 } }
+      ]
+    }
+  ]
+}

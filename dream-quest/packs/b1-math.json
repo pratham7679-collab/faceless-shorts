@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "id": "b1.math",
+  "version": "1.0.0",
+  "kind": "skills",
+  "band": 1,
+  "minApp": "1.0.0",
+  "engines": ["count", "math", "shapes"],
+  "title": "Explorer early math: Number Meadow",
+
+  "data": {
+    "things": ["firefly", "orb", "acorn", "mushroom", "berry", "leaf"],
+    "realWorld3d": [
+      { "thing": "a ball",       "p": "⚽", "shape": "sphere" },
+      { "thing": "an orange",    "p": "🍊", "shape": "sphere" },
+      { "thing": "a dice",       "p": "🎲", "shape": "cube" },
+      { "thing": "a gift box",   "p": "🎁", "shape": "cube" },
+      { "thing": "an ice cream cone", "p": "🍦", "shape": "cone" },
+      { "thing": "a party hat",  "p": "🥳", "shape": "cone" },
+      { "thing": "a tin can",    "p": "🥫", "shape": "cylinder" },
+      { "thing": "a drum",       "p": "🥁", "shape": "cylinder" }
+    ]
+  },
+
+  "skills": [
+    {
+      "id": "math.count", "domain": "math", "area": "number-meadow", "engine": "count",
+      "name": "Firefly Count", "art": "fireflies", "intro": "Tap each firefly to count it.",
+      "requires": [],
+      "levels": [
+        { "n": 1, "band": 1, "label": "Counts up to 5",                      "params": { "mode": "count", "min": 1, "max": 5, "choices": 3 } },
+        { "n": 2, "band": 1, "label": "Counts up to 10",                     "params": { "mode": "count", "min": 5, "max": 10, "choices": 3 } },
+        { "n": 3, "band": 1, "label": "Counts 11 to 20 with ten-frames",     "params": { "mode": "frame", "min": 11, "max": 20, "choices": 3 } },
+        { "n": 4, "band": 1, "label": "Knows what number comes next",        "params": { "mode": "next", "min": 3, "max": 30, "choices": 3 } },
+        { "n": 5, "band": 1, "label": "Tens and ones up to 50",              "params": { "mode": "tens", "min": 12, "max": 50, "choices": 3 } },
+        { "n": 6, "band": 1, "label": "Skip-counts by 2s, 5s and 10s",       "params": { "mode": "skip", "steps": [2, 5, 10], "choices": 3 } }
+      ]
+    },
+    {
+      "id": "math.add", "domain": "math", "area": "number-meadow", "engine": "math",
+      "name": "Orb Adding", "art": "plus", "intro": "Put the orbs together. How many now?",
+      "requires": [{ "skill": "math.count", "level": 1 }],
+      "levels": [
+        { "n": 1, "band": 1, "label": "Adds within 5 with pictures",         "params": { "op": "+", "max": 5, "pictures": true, "choices": 3 } },
+        { "n": 2, "band": 1, "label": "Adds within 10 with pictures",        "params": { "op": "+", "max": 10, "pictures": true, "choices": 3 } },
+        { "n": 3, "band": 1, "label": "Adds within 10 with numbers",         "params": { "op": "+", "max": 10, "pictures": false, "choices": 3 } },
+        { "n": 4, "band": 1, "label": "Adds within 20",                      "params": { "op": "+", "max": 20, "pictures": false, "choices": 4 } },
+        { "n": 5, "band": 1, "label": "Finds the missing number (3 + ? = 7)", "params": { "op": "+", "max": 10, "missing": true, "choices": 3 } },
+        { "n": 6, "band": 1, "label": "Adds 2-digit and 1-digit numbers",    "params": { "op": "+", "twoDigit": true, "max": 59, "choices": 4 } }
+      ]
+    },
+    {
+      "id": "math.sub", "domain": "math", "area": "number-meadow", "engine": "math",
+      "name": "Fly-Away Take Away", "art": "minus", "intro": "Some orbs float away. How many are left?",
+      "requires": [{ "skill": "math.add", "level": 1 }],
+      "levels": [
+        { "n": 1, "band": 1, "label": "Takes away within 5 with pictures",   "params": { "op": "-", "max": 5, "pictures": true, "choices": 3 } },
+        { "n": 2, "band": 1, "label": "Takes away within 10 with pictures",  "params": { "op": "-", "max": 10, "pictures": true, "choices": 3 } },
+        { "n": 3, "band": 1, "label": "Takes away within 10 with numbers",   "params": { "op": "-", "max": 10, "pictures": false, "choices": 3 } },
+        { "n": 4, "band": 1, "label": "Takes away within 20",                "params": { "op": "-", "max": 20, "pictures": false, "choices": 4 } },
+        { "n": 5, "band": 1, "label": "Finds the missing number (9 − ? = 4)", "params": { "op": "-", "max": 10, "missing": true, "choices": 3 } },
+        { "n": 6, "band": 1, "label": "Takes 1-digit from 2-digit numbers",  "params": { "op": "-", "twoDigit": true, "max": 59, "choices": 4 } }
+      ]
+    },
+    {
+      "id": "math.shapes", "domain": "math", "area": "number-meadow", "engine": "shapes",
+      "name": "Shape Hunt", "art": "shapes", "intro": "Find shapes hiding in the meadow.",
+      "requires": [],
+      "levels": [
+        { "n": 1, "band": 1, "label": "Finds circles, squares and triangles", "params": { "mode": "find", "set": ["circle", "square", "triangle"], "choices": 3 } },
+        { "n": 2, "band": 1, "label": "Finds rectangles, ovals, stars, hearts", "params": { "mode": "find", "set": ["circle", "square", "triangle", "rectangle", "oval", "star", "heart", "diamond"], "choices": 4 } },
+        { "n": 3, "band": 1, "label": "Counts sides",                          "params": { "mode": "sides", "set": ["triangle", "square", "rectangle", "pentagon", "hexagon"], "choices": 3 } },
+        { "n": 4, "band": 1, "label": "Finds a shape by its sides and corners", "params": { "mode": "which", "set": ["triangle", "square", "pentagon", "hexagon", "circle"], "choices": 3 } },
+        { "n": 5, "band": 1, "label": "Knows solid shapes: cube, sphere, cone, cylinder", "params": { "mode": "solid", "set": ["cube", "sphere", "cone", "cylinder"], "choices": 3 } },
+        { "n": 6, "band": 1, "label": "Spots solid shapes in real things",     "params": { "mode": "real", "set": ["cube", "sphere", "cone", "cylinder"], "choices": 3 } }
+      ]
+    }
+  ]
+}

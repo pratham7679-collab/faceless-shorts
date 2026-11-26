@@ -1,0 +1,11 @@
+{
+  "format": 1,
+  "channel": "stable",
+  "updated": "2026-11-26",
+  "packs": [
+    { "id": "core.world", "version": "1.0.0", "band": 0, "file": "core-world.json", "minApp": "1.0.0", "required": true },
+    { "id": "b1.reading", "version": "1.0.0", "band": 1, "file": "b1-reading.json", "minApp": "1.0.0", "engines": ["phonics", "build"] },
+    { "id": "b1.math",    "version": "1.0.0", "band": 1, "file": "b1-math.json",    "minApp": "1.0.0", "engines": ["count", "math", "shapes"] },
+    { "id": "b1.stories", "version": "1.0.0", "band": 1, "file": "b1-stories.json", "minApp": "1.0.0", "engines": ["story"] }
+  ]
+}

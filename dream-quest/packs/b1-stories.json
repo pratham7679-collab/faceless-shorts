@@ -1,0 +1,137 @@
+{
+  "format": 1,
+  "id": "b1.stories",
+  "version": "1.0.0",
+  "kind": "skills",
+  "band": 1,
+  "minApp": "1.0.0",
+  "engines": ["story"],
+  "title": "Explorer read-aloud stories: Story Grove",
+
+  "data": {
+    "stories": [
+      {
+        "id": "pip-cap", "tier": 1, "title": "Pip and the Blue Cap", "cover": { "bg": "meadow", "cast": [{ "c": "pip", "x": 50 }], "props": [{ "e": "🧢", "x": 50, "y": 18, "s": 30 }] },
+        "pages": [
+          { "text": "Pip the bunny had a blue cap. Pip loved that cap very much.", "scene": { "bg": "meadow", "cast": [{ "c": "pip", "x": 50, "mood": "happy" }], "props": [{ "e": "🧢", "x": 50, "y": 22, "s": 26 }] } },
+          { "text": "One windy day, whoosh! The wind blew the cap away.", "scene": { "bg": "meadow", "fx": "wind", "cast": [{ "c": "pip", "x": 35, "mood": "surprised" }], "props": [{ "e": "🧢", "x": 78, "y": 14, "s": 24, "fly": true }] } },
+          { "text": "Pip looked by the pond. No cap. Pip looked in the tall grass. No cap.", "scene": { "bg": "pond", "cast": [{ "c": "pip", "x": 40, "mood": "sad" }], "props": [{ "e": "🌾", "x": 80, "y": 62, "s": 34 }] } },
+          { "text": "Then Moss the frog hopped up. The cap was on his head!", "scene": { "bg": "pond", "cast": [{ "c": "pip", "x": 30, "mood": "surprised" }, { "c": "moss", "x": 70, "mood": "happy" }], "props": [{ "e": "🧢", "x": 70, "y": 26, "s": 24 }] } },
+          { "text": "Moss gave the cap back. Pip gave Moss a big hug.", "scene": { "bg": "meadow", "cast": [{ "c": "pip", "x": 42, "mood": "happy" }, { "c": "moss", "x": 60, "mood": "happy" }], "props": [{ "e": "💛", "x": 51, "y": 14, "s": 22 }] } }
+        ],
+        "questions": [
+          { "type": "who",  "q": "Who is this story about?",            "a": "Pip the bunny", "d": ["Hoot the owl", "a little fish"], "hint": "Think about who had the blue cap." },
+          { "type": "what", "q": "What did Pip lose?",                   "a": "a blue cap",    "d": ["a red ball", "a shoe"], "hint": "It was something Pip wore on top of the head." },
+          { "type": "where","q": "Where did Pip look for the cap?",      "a": "by the pond",   "d": ["up a tree", "under the bed"], "hint": "Pip looked near the water." },
+          { "type": "seq",  "q": "What happened first?",                 "a": "The wind blew the cap away", "d": ["Pip hugged Moss", "Moss hopped up"], "hint": "Think back to the very beginning, when it was windy." },
+          { "type": "why",  "q": "Why did the cap fly away?",            "a": "The wind blew it", "d": ["Moss took it", "Pip threw it"], "hint": "Whoosh! What went whoosh?" }
+        ]
+      },
+      {
+        "id": "sleepy-star", "tier": 1, "title": "The Sleepy Star", "cover": { "bg": "night", "cast": [{ "c": "hoot", "x": 50 }], "props": [{ "e": "⭐", "x": 74, "y": 16, "s": 26 }] },
+        "pages": [
+          { "text": "Up in the sky, one little star was very sleepy.", "scene": { "bg": "night", "cast": [], "props": [{ "e": "⭐", "x": 50, "y": 30, "s": 40, "dim": true }] } },
+          { "text": "It yawned. Its light got dim, dim, dim.", "scene": { "bg": "night", "cast": [], "props": [{ "e": "⭐", "x": 50, "y": 30, "s": 34, "dim": true }] } },
+          { "text": "Hoot the owl saw the star. Hoot sang a soft song to it.", "scene": { "bg": "night", "cast": [{ "c": "hoot", "x": 40, "mood": "happy" }], "props": [{ "e": "⭐", "x": 74, "y": 18, "s": 26, "dim": true }, { "e": "🎵", "x": 58, "y": 30, "s": 20 }] } },
+          { "text": "The star smiled. Its light grew big and bright.", "scene": { "bg": "night", "cast": [{ "c": "hoot", "x": 40, "mood": "happy" }], "props": [{ "e": "🌟", "x": 70, "y": 18, "s": 40 }] } },
+          { "text": "Now the star shines over Dream Valley every night.", "scene": { "bg": "night", "cast": [{ "c": "pip", "x": 30 }, { "c": "hoot", "x": 66 }], "props": [{ "e": "🌟", "x": 50, "y": 12, "s": 30 }] } }
+        ],
+        "questions": [
+          { "type": "who",  "q": "Who sang a song to the star?",            "a": "Hoot the owl", "d": ["Pip the bunny", "the moon"], "hint": "Who is the wise owl?" },
+          { "type": "what", "q": "How was the star at the start?",         "a": "very sleepy",  "d": ["very hungry", "very cross"], "hint": "The star yawned." },
+          { "type": "where","q": "Where was the little star?",             "a": "up in the sky", "d": ["in the pond", "in a box"], "hint": "Look up!" },
+          { "type": "seq",  "q": "What happened after Hoot sang?",         "a": "The star grew bright", "d": ["The star fell down", "It started to rain"], "hint": "The song helped the star." },
+          { "type": "why",  "q": "Why did the star's light get bright?",   "a": "Hoot sang to it", "d": ["The sun came up", "It ate dinner"], "hint": "What did Hoot do for the star?" }
+        ]
+      },
+      {
+        "id": "ember-climb", "tier": 2, "title": "Ember's Big Climb", "cover": { "bg": "hill", "cast": [{ "c": "ember", "x": 50 }], "props": [{ "e": "🏮", "x": 78, "y": 12, "s": 26 }] },
+        "pages": [
+          { "text": "Ember the fox wanted to light the lantern at the top of Lantern Hill.", "scene": { "bg": "hill", "cast": [{ "c": "ember", "x": 26, "mood": "happy" }], "props": [{ "e": "🏮", "x": 80, "y": 10, "s": 24, "dim": true }] } },
+          { "text": "The hill was steep. Ember's legs felt wobbly, and she wanted to go home.", "scene": { "bg": "hill", "cast": [{ "c": "ember", "x": 34, "mood": "sad" }], "props": [{ "e": "🏮", "x": 80, "y": 10, "s": 24, "dim": true }] } },
+          { "text": "Juniper the deer said, \"Just take one small step at a time.\"", "scene": { "bg": "hill", "cast": [{ "c": "ember", "x": 34, "mood": "surprised" }, { "c": "juniper", "x": 64, "mood": "happy" }], "props": [] } },
+          { "text": "Step, step, step. Ember rested on a rock, then kept going.", "scene": { "bg": "hill", "cast": [{ "c": "ember", "x": 56, "mood": "happy" }], "props": [{ "e": "🪨", "x": 50, "y": 72, "s": 30 }] } },
+          { "text": "At the top, Ember lit the lantern. The whole valley glowed gold!", "scene": { "bg": "hill", "fx": "glow", "cast": [{ "c": "ember", "x": 70, "mood": "happy" }], "props": [{ "e": "🏮", "x": 82, "y": 10, "s": 30 }] } }
+        ],
+        "questions": [
+          { "type": "who",  "q": "Who helped Ember?",                          "a": "Juniper the deer", "d": ["Hoot the owl", "Moss the frog"], "hint": "Who said take one small step at a time?" },
+          { "type": "what", "q": "What did Ember want to do?",                 "a": "light the lantern", "d": ["find a hat", "go swimming"], "hint": "It was at the top of Lantern Hill." },
+          { "type": "seq",  "q": "What did Ember do after resting on a rock?", "a": "kept going", "d": ["went home", "fell asleep"], "hint": "Ember did not give up." },
+          { "type": "why",  "q": "Why did Ember's legs feel wobbly?",          "a": "The hill was steep", "d": ["It was lunch time", "She lost her map"], "hint": "Think about the hill." },
+          { "type": "feel", "q": "How did Ember feel at the start of the climb?", "a": "a little scared", "d": ["very sleepy", "silly and giggly"], "hint": "She wanted to go home." }
+        ]
+      },
+      {
+        "id": "moss-rain", "tier": 2, "title": "Moss and the Big Rain", "cover": { "bg": "rain", "cast": [{ "c": "moss", "x": 50 }], "props": [] },
+        "pages": [
+          { "text": "Drip, drop. Rain fell on Dream Valley all day long.", "scene": { "bg": "rain", "fx": "rain", "cast": [{ "c": "moss", "x": 50, "mood": "surprised" }], "props": [] } },
+          { "text": "The pond got bigger and bigger. Clover the mouse had a little house by the pond!", "scene": { "bg": "pond", "fx": "rain", "cast": [{ "c": "clover", "x": 70, "mood": "sad" }], "props": [{ "e": "🏠", "x": 84, "y": 56, "s": 30 }] } },
+          { "text": "Moss had an idea. He pushed a big lily pad to Clover's door.", "scene": { "bg": "pond", "cast": [{ "c": "moss", "x": 36, "mood": "happy" }, { "c": "clover", "x": 70 }], "props": [{ "e": "🍃", "x": 52, "y": 72, "s": 34 }] } },
+          { "text": "Clover hopped on the lily pad. Moss swam and pulled it to the high hill.", "scene": { "bg": "hill", "cast": [{ "c": "moss", "x": 36, "mood": "happy" }, { "c": "clover", "x": 58, "mood": "surprised" }], "props": [] } },
+          { "text": "Clover was safe and dry. \"Thank you, Moss!\" she squeaked.", "scene": { "bg": "hill", "cast": [{ "c": "moss", "x": 40, "mood": "happy" }, { "c": "clover", "x": 62, "mood": "happy" }], "props": [{ "e": "💛", "x": 51, "y": 16, "s": 22 }] } }
+        ],
+        "questions": [
+          { "type": "who",  "q": "Who had an idea?",                 "a": "Moss the frog", "d": ["Clover the mouse", "Hoot the owl"], "hint": "Who pushed the lily pad?" },
+          { "type": "what", "q": "What did Moss use to help?",       "a": "a big lily pad", "d": ["a boat", "a log"], "hint": "It was green and floated on the pond." },
+          { "type": "seq",  "q": "What happened first?",             "a": "Rain fell all day", "d": ["Clover said thank you", "Moss swam to the hill"], "hint": "Drip, drop, at the very start." },
+          { "type": "where","q": "Where did Moss take Clover?",      "a": "to the high hill", "d": ["into the pond", "to the moon"], "hint": "Somewhere high and dry." },
+          { "type": "why",  "q": "Why did Clover need help?",        "a": "The pond was getting close to her house", "d": ["She was hungry", "She lost her hat"], "hint": "The pond got bigger and bigger." },
+          { "type": "feel", "q": "How did Clover feel at the end?",  "a": "thankful", "d": ["cross", "bored"], "hint": "She said thank you." }
+        ]
+      },
+      {
+        "id": "quiet-night", "tier": 3, "title": "Hoot's Quiet Night", "cover": { "bg": "night", "cast": [{ "c": "hoot", "x": 50 }], "props": [{ "e": "📖", "x": 72, "y": 56, "s": 26 }] },
+        "pages": [
+          { "text": "Every night, Hoot reads stories to the little ones of Dream Valley.", "scene": { "bg": "night", "cast": [{ "c": "hoot", "x": 50, "mood": "happy" }], "props": [{ "e": "📖", "x": 66, "y": 56, "s": 24 }] } },
+          { "text": "But tonight, Hoot's voice was just a tiny whisper. \"Oh dear,\" whispered Hoot.", "scene": { "bg": "night", "cast": [{ "c": "hoot", "x": 50, "mood": "sad" }], "props": [] } },
+          { "text": "Pip, Moss and Ember looked at each other. Then Pip said, \"We can tell the story!\"", "scene": { "bg": "night", "cast": [{ "c": "pip", "x": 26, "mood": "happy" }, { "c": "moss", "x": 50 }, { "c": "ember", "x": 74 }], "props": [] } },
+          { "text": "Pip told the beginning. Moss told the middle. Ember told the very end.", "scene": { "bg": "night", "cast": [{ "c": "pip", "x": 22, "mood": "happy" }, { "c": "moss", "x": 46, "mood": "happy" }, { "c": "ember", "x": 70, "mood": "happy" }], "props": [{ "e": "📖", "x": 88, "y": 60, "s": 22 }] } },
+          { "text": "Hoot hooted a soft, happy hoot. \"That was the best story of all,\" Hoot whispered.", "scene": { "bg": "night", "cast": [{ "c": "hoot", "x": 50, "mood": "happy" }], "props": [{ "e": "💛", "x": 50, "y": 10, "s": 22 }] } }
+        ],
+        "questions": [
+          { "type": "who",     "q": "Whose idea was it to tell the story?", "a": "Pip", "d": ["Moss", "Hoot"], "hint": "Who said, we can tell the story?" },
+          { "type": "why",     "q": "Why couldn't Hoot read the story?",    "a": "Hoot's voice was a tiny whisper", "d": ["The book was lost", "It was too sunny"], "hint": "Listen to how Hoot talked." },
+          { "type": "seq",     "q": "Who told the end of the story?",       "a": "Ember", "d": ["Pip", "Moss"], "hint": "Beginning, middle, end. Who was last?" },
+          { "type": "feel",    "q": "How did Hoot feel when the friends told the story?", "a": "happy and proud", "d": ["cross", "scared"], "hint": "Hoot gave a soft, happy hoot." },
+          { "type": "infer",   "q": "What did the friends learn?",          "a": "Friends can help by working together", "d": ["Owls cannot read", "Stories are boring"], "hint": "Each friend told one part." },
+          { "type": "predict", "q": "What might happen tomorrow night?",    "a": "Hoot reads again when the voice is better", "d": ["Hoot flies far away", "The book turns into a frog"], "hint": "Hoot loves reading every night." }
+        ]
+      },
+      {
+        "id": "pebble-bridge", "tier": 3, "title": "The Pebble Bridge", "cover": { "bg": "stream", "cast": [{ "c": "tumble", "x": 40 }], "props": [{ "e": "🪨", "x": 64, "y": 72, "s": 22 }] },
+        "pages": [
+          { "text": "Tumble the hedgehog wanted to visit his friend Hazel the squirrel, across the stream.", "scene": { "bg": "stream", "cast": [{ "c": "tumble", "x": 20, "mood": "happy" }, { "c": "hazel", "x": 82, "mood": "happy" }], "props": [] } },
+          { "text": "But the stream was too wide to jump. Tumble sat down and sighed.", "scene": { "bg": "stream", "cast": [{ "c": "tumble", "x": 20, "mood": "sad" }, { "c": "hazel", "x": 82 }], "props": [] } },
+          { "text": "Then Tumble saw smooth, flat pebbles on the shore. He had a plan.", "scene": { "bg": "stream", "cast": [{ "c": "tumble", "x": 20, "mood": "surprised" }], "props": [{ "e": "🪨", "x": 34, "y": 76, "s": 20 }, { "e": "🪨", "x": 8, "y": 80, "s": 18 }] } },
+          { "text": "One by one, Tumble placed pebbles in the water. Soon there was a little bridge.", "scene": { "bg": "stream", "cast": [{ "c": "tumble", "x": 30, "mood": "happy" }], "props": [{ "e": "🪨", "x": 44, "y": 70, "s": 20 }, { "e": "🪨", "x": 54, "y": 70, "s": 20 }, { "e": "🪨", "x": 64, "y": 70, "s": 20 }] } },
+          { "text": "Tumble hopped across. Hazel cheered, \"You built a bridge all by yourself!\"", "scene": { "bg": "stream", "cast": [{ "c": "tumble", "x": 70, "mood": "happy" }, { "c": "hazel", "x": 86, "mood": "happy" }], "props": [{ "e": "🪨", "x": 44, "y": 70, "s": 20 }, { "e": "🪨", "x": 54, "y": 70, "s": 20 }, { "e": "🪨", "x": 64, "y": 70, "s": 20 }] } }
+        ],
+        "questions": [
+          { "type": "who",     "q": "Who lived across the stream?",          "a": "Hazel the squirrel", "d": ["Pip the bunny", "Moss the frog"], "hint": "Tumble wanted to visit this friend." },
+          { "type": "feel",    "q": "How did Tumble feel when he sat down and sighed?", "a": "stuck and sad", "d": ["excited", "sleepy"], "hint": "The stream was too wide." },
+          { "type": "why",     "q": "Why did Tumble put pebbles in the water?", "a": "to make a bridge", "d": ["to hear a splash", "to hide them"], "hint": "He wanted to get across." },
+          { "type": "seq",     "q": "What happened after Tumble saw the pebbles?", "a": "He made a plan", "d": ["He went home", "He fell in"], "hint": "He had an idea." },
+          { "type": "infer",   "q": "What kind of friend is Tumble?",         "a": "One who does not give up", "d": ["One who is lazy", "One who is mean"], "hint": "He found a way across." },
+          { "type": "predict", "q": "What might Tumble and Hazel do next?",   "a": "Play together", "d": ["Have a big fight", "Never meet again"], "hint": "They are friends, and now they are together." }
+        ]
+      }
+    ]
+  },
+
+  "skills": [
+    {
+      "id": "story.listen", "domain": "stories", "area": "story-grove", "engine": "story",
+      "name": "Story Time", "art": "book", "intro": "Listen to a story, then answer Hoot's questions.",
+      "requires": [],
+      "items": 3,
+      "levels": [
+        { "n": 1, "band": 1, "label": "Remembers who and what",              "params": { "tiers": [1],    "types": ["who", "what"] } },
+        { "n": 2, "band": 1, "label": "Remembers where and what came first",  "params": { "tiers": [1],    "types": ["who", "what", "where", "seq"] } },
+        { "n": 3, "band": 1, "label": "Follows longer stories",              "params": { "tiers": [1, 2], "types": ["what", "where", "seq", "who"] } },
+        { "n": 4, "band": 1, "label": "Explains why things happen",          "params": { "tiers": [2],    "types": ["why", "seq", "what"] } },
+        { "n": 5, "band": 1, "label": "Understands how characters feel",     "params": { "tiers": [2, 3], "types": ["feel", "why", "seq"] } },
+        { "n": 6, "band": 1, "label": "Reads between the lines and predicts", "params": { "tiers": [3],    "types": ["infer", "predict", "feel", "why"] } }
+      ]
+    }
+  ]
+}

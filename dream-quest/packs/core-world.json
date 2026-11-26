@@ -1,0 +1,200 @@
+{
+  "format": 1,
+  "id": "core.world",
+  "version": "1.0.0",
+  "kind": "world",
+  "band": 0,
+  "minApp": "1.0.0",
+  "title": "Dream Valley world map, life bands, companions and the lifelong skill graph",
+
+  "flagCatalog": {
+    "voiceFirst":       { "type": "bool",   "default": true,     "about": "Narrator reads every screen aloud" },
+    "autoRead":         { "type": "bool",   "default": true,     "about": "Prompts are spoken automatically, not only on tap" },
+    "typing":           { "type": "bool",   "default": false,    "about": "Keyboard answers allowed (otherwise picture and tap answers only)" },
+    "socialMode":       { "type": "enum",   "default": "none",   "values": ["none", "family", "approved-friends", "moderated-groups", "open-moderated"], "about": "Who the player can interact with" },
+    "groupChat":        { "type": "bool",   "default": false,    "about": "Moderated group chat (Teen band and up, parent-visible)" },
+    "clubs":            { "type": "bool",   "default": false,    "about": "Interest clubs and study groups" },
+    "friends":          { "type": "bool",   "default": false,    "about": "Friend list (parent-approved before 16)" },
+    "teamQuests":       { "type": "bool",   "default": false,    "about": "Quests played together with approved friends" },
+    "familyChallenges": { "type": "bool",   "default": false,    "about": "Challenges shared inside the family account" },
+    "writing":          { "type": "bool",   "default": false,    "about": "Build-a-story and writing studios" },
+    "languages":        { "type": "enum",   "default": "off",    "values": ["off", "intro", "conversation", "fluency", "advanced", "certificate"], "about": "Language-learning depth" },
+    "coding":           { "type": "bool",   "default": false,    "about": "Coding courses" },
+    "mentoring":        { "type": "enum",   "default": "off",    "values": ["off", "supervised", "mentor", "coach"], "about": "Helping younger bands" },
+    "createQuests":     { "type": "bool",   "default": false,    "about": "Player can author quests for younger players" },
+    "accountOwner":     { "type": "enum",   "default": "parent", "values": ["parent", "shared", "self"], "about": "Who controls the account" },
+    "parentGate":       { "type": "enum",   "default": "pin",    "values": ["pin", "pin+visibility", "notify", "none"], "about": "How grown-up controls are protected" },
+    "addChild":         { "type": "bool",   "default": false,    "about": "Player can add their own child, who starts at Band 1" },
+    "companionRole":    { "type": "enum",   "default": "buddy",  "values": ["buddy", "guide", "teammate", "coach"], "about": "How companions talk to the player" },
+    "questLength":      { "type": "int",    "default": 5,        "about": "Items per quest" }
+  },
+
+  "bands": [
+    {
+      "id": 1, "key": "explorer", "name": "Explorer", "minAge": 7, "ages": "7–8", "status": "live",
+      "region": "Dawn Meadow",
+      "theme": { "sky1": "#1d1b4f", "sky2": "#3b2f7a", "hill": "#2f6f68", "glow": "#ffd36b" },
+      "companionStage": 1,
+      "flags": { "voiceFirst": true, "autoRead": true, "typing": false, "socialMode": "none", "accountOwner": "parent", "parentGate": "pin", "companionRole": "buddy", "questLength": 5 },
+      "difficulty": { "numbersUpTo": 50, "wordShapes": ["cvc", "blend", "digraph", "silente"], "storyTiers": [1, 3], "sessionMinutes": 20 },
+      "areas": ["word-woods", "number-meadow", "story-grove", "lantern-hill", "dream-path"],
+      "courses": ["Reading & phonics", "Early math", "Story listening"]
+    },
+    {
+      "id": 2, "key": "adventurer", "name": "Adventurer", "minAge": 9, "ages": "9–10", "status": "planned",
+      "region": "Whispering Falls",
+      "theme": { "sky1": "#14325a", "sky2": "#2a5c8a", "hill": "#3d7f4f", "glow": "#9ff0ff" },
+      "companionStage": 2,
+      "flags": { "voiceFirst": true, "autoRead": false, "typing": true, "socialMode": "family", "familyChallenges": true, "writing": true, "languages": "intro", "companionRole": "buddy", "questLength": 6 },
+      "difficulty": { "numbersUpTo": 1000, "storyTiers": [3, 5], "sessionMinutes": 30 },
+      "areas": ["chapter-cove", "times-tower", "sprout-lab", "story-forge", "song-bridge", "family-camp"],
+      "courses": ["Chapter books", "Multiplication & fractions", "First science quests", "Build-a-story writing", "Intro language: words & songs", "Family challenges"]
+    },
+    {
+      "id": 3, "key": "scholar", "name": "Scholar", "minAge": 11, "ages": "11–12", "status": "planned",
+      "region": "Starlight Hills",
+      "theme": { "sky1": "#221640", "sky2": "#4a2c6e", "hill": "#46506e", "glow": "#c7b6ff" },
+      "companionStage": 3,
+      "flags": { "voiceFirst": false, "autoRead": false, "typing": true, "socialMode": "approved-friends", "friends": true, "teamQuests": true, "familyChallenges": true, "writing": true, "languages": "conversation", "coding": true, "companionRole": "guide", "questLength": 8 },
+      "difficulty": { "numbersUpTo": 1000000, "sessionMinutes": 45 },
+      "areas": ["math-summit", "science-observatory", "history-ruins", "language-cafe", "code-caves", "project-workshop", "team-camp"],
+      "courses": ["Full math path", "Science quests", "History adventures", "Language conversation practice", "Coding basics", "Guided projects", "Team quests with parent-approved friends"]
+    },
+    {
+      "id": 4, "key": "teen", "name": "Teen", "minAge": 13, "ages": "13–15", "status": "planned",
+      "region": "Lantern City",
+      "theme": { "sky1": "#101a33", "sky2": "#273a6b", "hill": "#384a5a", "glow": "#ffb86b" },
+      "companionStage": 4,
+      "flags": { "voiceFirst": false, "autoRead": false, "typing": true, "socialMode": "moderated-groups", "groupChat": true, "clubs": true, "friends": true, "teamQuests": true, "writing": true, "languages": "fluency", "coding": true, "mentoring": "supervised", "parentGate": "pin+visibility", "accountOwner": "shared", "companionRole": "teammate", "questLength": 10 },
+      "areas": ["club-plaza", "study-hall", "exam-arena", "fluency-harbor", "money-market", "creative-studios", "mentor-grove"],
+      "courses": ["Moderated group chat & clubs (parent-visible)", "Study groups", "Exam prep", "Language fluency path", "Money basics", "Creative studios", "Supervised mentoring of younger bands"]
+    },
+    {
+      "id": 5, "key": "launch", "name": "Launch", "minAge": 16, "ages": "16–18", "status": "planned",
+      "region": "Horizon Coast",
+      "theme": { "sky1": "#0f2333", "sky2": "#1f4a66", "hill": "#2b5e5a", "glow": "#7fe3c4" },
+      "companionStage": 5,
+      "flags": { "voiceFirst": false, "typing": true, "socialMode": "open-moderated", "groupChat": true, "clubs": true, "friends": true, "teamQuests": true, "writing": true, "languages": "advanced", "coding": true, "mentoring": "mentor", "createQuests": true, "parentGate": "notify", "accountOwner": "shared", "companionRole": "coach", "questLength": 10 },
+      "areas": ["exam-citadel", "career-docks", "language-lighthouse", "finance-wharf", "portfolio-gallery", "leaders-hall", "quest-workshop"],
+      "courses": ["Exam mastery", "Career exploration", "Advanced languages", "Real-world finance", "Portfolio projects", "Club leadership", "Creating quests for younger players"]
+    },
+    {
+      "id": 6, "key": "adult", "name": "Adult", "minAge": 18, "ages": "18–25", "status": "planned",
+      "region": "Open Skies",
+      "theme": { "sky1": "#0c1a2c", "sky2": "#23405f", "hill": "#33505a", "glow": "#ffe6a8" },
+      "companionStage": 6,
+      "flags": { "voiceFirst": false, "typing": true, "socialMode": "open-moderated", "groupChat": true, "clubs": true, "friends": true, "teamQuests": true, "writing": true, "languages": "certificate", "coding": true, "mentoring": "coach", "createQuests": true, "parentGate": "none", "accountOwner": "self", "companionRole": "coach", "questLength": 10 },
+      "areas": ["skill-guild", "certificate-tower", "creator-studio", "mentor-circle"],
+      "courses": ["Professional courses & upskilling", "Language fluency & certificates", "Creator and mentor roles"]
+    },
+    {
+      "id": 7, "key": "life", "name": "Life", "minAge": 25, "ages": "25–30+", "status": "planned",
+      "region": "Homestead",
+      "theme": { "sky1": "#1a1630", "sky2": "#3d2f55", "hill": "#4b5d4a", "glow": "#ffd36b" },
+      "companionStage": 6,
+      "flags": { "voiceFirst": false, "typing": true, "socialMode": "open-moderated", "groupChat": true, "clubs": true, "friends": true, "teamQuests": true, "writing": true, "languages": "certificate", "coding": true, "mentoring": "coach", "createQuests": true, "parentGate": "none", "accountOwner": "self", "addChild": true, "companionRole": "coach", "questLength": 10 },
+      "areas": ["lifelong-library", "family-hearth"],
+      "courses": ["Lifelong courses & languages", "Family hearth: add your own child, who starts Band 1 in this same world"]
+    }
+  ],
+
+  "areas": {
+    "word-woods":     { "name": "Word Woods",     "band": 1, "domain": "reading", "art": "woods",   "say": "Word Woods, where letters grow on trees." },
+    "number-meadow":  { "name": "Number Meadow",  "band": 1, "domain": "math",    "art": "meadow",  "say": "Number Meadow, where the fireflies love to be counted." },
+    "story-grove":    { "name": "Story Grove",    "band": 1, "domain": "stories", "art": "grove",   "say": "Story Grove. Let's read a story together." },
+    "lantern-hill":   { "name": "Lantern Hill",   "band": 1, "domain": "rewards", "art": "lantern", "say": "Lantern Hill, where your Dream Lanterns glow and your companions live." },
+    "dream-path":     { "name": "Dream Path",     "band": 1, "domain": "rewards", "art": "path",    "say": "The Dream Path. Every quest adds a paw print." },
+    "chapter-cove":   { "name": "Chapter Cove",   "band": 2, "art": "mist" },
+    "times-tower":    { "name": "Times Tower",    "band": 2, "art": "mist" },
+    "sprout-lab":     { "name": "Sprout Lab",     "band": 2, "art": "mist" },
+    "story-forge":    { "name": "Story Forge",    "band": 2, "art": "mist" },
+    "song-bridge":    { "name": "Song Bridge",    "band": 2, "art": "mist" },
+    "family-camp":    { "name": "Family Camp",    "band": 2, "art": "mist" }
+  },
+
+  "skillGraph": {
+    "domains": {
+      "reading":  { "name": "Reading & phonics" },
+      "math":     { "name": "Math" },
+      "stories":  { "name": "Story comprehension" },
+      "science":  { "name": "Science" },
+      "writing":  { "name": "Writing" },
+      "language": { "name": "Languages" },
+      "history":  { "name": "History" },
+      "coding":   { "name": "Coding" },
+      "money":    { "name": "Money & finance" },
+      "life":     { "name": "Careers & life skills" }
+    },
+    "planned": [
+      { "id": "read.chapter",     "domain": "reading",  "band": 2, "name": "Chapter books",            "requires": [{ "skill": "read.decode", "level": 6 }, { "skill": "story.listen", "level": 6 }] },
+      { "id": "math.multiply",    "domain": "math",     "band": 2, "name": "Multiplication",           "requires": [{ "skill": "math.add", "level": 6 }, { "skill": "math.count", "level": 6 }] },
+      { "id": "math.fractions",   "domain": "math",     "band": 2, "name": "Fractions",                "requires": [{ "skill": "math.shapes", "level": 4 }] },
+      { "id": "sci.explore",      "domain": "science",  "band": 2, "name": "First science quests",     "requires": [{ "skill": "story.listen", "level": 4 }] },
+      { "id": "write.story",      "domain": "writing",  "band": 2, "name": "Build-a-story",            "requires": [{ "skill": "read.build", "level": 5 }] },
+      { "id": "lang.words",       "domain": "language", "band": 2, "name": "Intro language: words & songs", "requires": [{ "skill": "read.sounds", "level": 6 }] },
+      { "id": "math.path",        "domain": "math",     "band": 3, "name": "Full math path",           "requires": [{ "skill": "math.multiply", "level": 1 }] },
+      { "id": "hist.adventures",  "domain": "history",  "band": 3, "name": "History adventures",       "requires": [{ "skill": "read.chapter", "level": 1 }] },
+      { "id": "lang.conversation","domain": "language", "band": 3, "name": "Conversation practice",    "requires": [{ "skill": "lang.words", "level": 1 }] },
+      { "id": "code.basics",      "domain": "coding",   "band": 3, "name": "Coding basics",            "requires": [{ "skill": "math.path", "level": 1 }] },
+      { "id": "study.exams",      "domain": "life",     "band": 4, "name": "Exam prep",                "requires": [{ "skill": "math.path", "level": 1 }] },
+      { "id": "lang.fluency",     "domain": "language", "band": 4, "name": "Language fluency path",    "requires": [{ "skill": "lang.conversation", "level": 1 }] },
+      { "id": "money.basics",     "domain": "money",    "band": 4, "name": "Money basics",             "requires": [{ "skill": "math.path", "level": 1 }] },
+      { "id": "money.finance",    "domain": "money",    "band": 5, "name": "Real-world finance",       "requires": [{ "skill": "money.basics", "level": 1 }] },
+      { "id": "life.careers",     "domain": "life",     "band": 5, "name": "Career exploration",       "requires": [{ "skill": "study.exams", "level": 1 }] },
+      { "id": "lang.advanced",    "domain": "language", "band": 5, "name": "Advanced languages",       "requires": [{ "skill": "lang.fluency", "level": 1 }] },
+      { "id": "life.pro",         "domain": "life",     "band": 6, "name": "Professional courses",     "requires": [{ "skill": "life.careers", "level": 1 }] },
+      { "id": "lang.certificate", "domain": "language", "band": 6, "name": "Language certificates",    "requires": [{ "skill": "lang.advanced", "level": 1 }] },
+      { "id": "life.lifelong",    "domain": "life",     "band": 7, "name": "Lifelong courses",         "requires": [{ "skill": "life.pro", "level": 1 }] }
+    ]
+  },
+
+  "heroNames": {
+    "first": [
+      { "w": "Brave",   "art": "spark" }, { "w": "Starry", "art": "moon" }, { "w": "Swift",  "art": "wind" },
+      { "w": "Gentle",  "art": "leaf" },  { "w": "Sunny",  "art": "sun" },  { "w": "Clever", "art": "key" }
+    ],
+    "second": [
+      { "w": "Fox", "c": "ember" }, { "w": "Bunny", "c": "pip" }, { "w": "Bear", "c": "biscuit" },
+      { "w": "Dragon", "c": "rumble" }, { "w": "Owl", "c": "hoot" }, { "w": "Frog", "c": "moss" }
+    ]
+  },
+
+  "starterCompanions": ["pip", "ember", "moss", "biscuit", "juno", "mochi"],
+  "companionEvery": 3,
+
+  "companions": [
+    { "id": "pip",     "name": "Pip",     "kind": "bunny",    "body": "#f4d9c6", "belly": "#fff4ea", "ear": "bunny",  "tail": "pom",    "extra": "",       "line": "Hop hop hooray!" },
+    { "id": "ember",   "name": "Ember",   "kind": "fox",      "body": "#f08a3c", "belly": "#fff1de", "ear": "fox",    "tail": "fluffy", "extra": "",       "line": "Look at you glow!" },
+    { "id": "moss",    "name": "Moss",    "kind": "frog",     "body": "#6cc070", "belly": "#d9f7c8", "ear": "frog",   "tail": "none",   "extra": "spots",  "line": "Ribbit! That was hop-tastic!" },
+    { "id": "biscuit", "name": "Biscuit", "kind": "bear cub", "body": "#b07a4f", "belly": "#f0d3ae", "ear": "bear",   "tail": "none",   "extra": "",       "line": "Big bear hug for you!" },
+    { "id": "juno",    "name": "Juno",    "kind": "unicorn",  "body": "#f6eefe", "belly": "#ffffff", "ear": "horn",   "tail": "swish",  "extra": "mane",   "line": "Sparkle power!" },
+    { "id": "mochi",   "name": "Mochi",   "kind": "panda",    "body": "#fbfbf7", "belly": "#ffffff", "ear": "panda",  "tail": "none",   "extra": "patches","line": "Bamboo-zling!" },
+    { "id": "juniper", "name": "Juniper", "kind": "deer",     "body": "#c98d5b", "belly": "#f7e2c9", "ear": "deer",   "tail": "pom",    "extra": "spots",  "line": "One small step at a time." },
+    { "id": "clover",  "name": "Clover",  "kind": "mouse",    "body": "#c9c3d6", "belly": "#f4eff9", "ear": "mouse",  "tail": "curl",   "extra": "",       "line": "Squeak! Super!" },
+    { "id": "tumble",  "name": "Tumble",  "kind": "hedgehog", "body": "#d9b48a", "belly": "#fbecd7", "ear": "spikes", "tail": "none",   "extra": "",       "line": "Never give up!" },
+    { "id": "hazel",   "name": "Hazel",   "kind": "squirrel", "body": "#c46b3c", "belly": "#f6d8b9", "ear": "cat",    "tail": "fluffy", "extra": "",       "line": "Nutty good!" },
+    { "id": "nimbus",  "name": "Nimbus",  "kind": "cloud lamb","body": "#eef2ff","belly": "#ffffff", "ear": "lamb",   "tail": "pom",    "extra": "fluff",  "line": "Floaty fantastic!" },
+    { "id": "pebble",  "name": "Pebble",  "kind": "turtle",   "body": "#8fcf9a", "belly": "#eaf7d4", "ear": "none",   "tail": "none",   "extra": "shell",  "line": "Slow and steady wins!" },
+    { "id": "wisp",    "name": "Wisp",    "kind": "firefly",  "body": "#ffe27a", "belly": "#fff8d6", "ear": "antenna","tail": "none",   "extra": "wings",  "line": "You light up the night!" },
+    { "id": "sprout",  "name": "Sprout",  "kind": "leaf dragon","body": "#7fd3a0","belly": "#e3f9e8", "ear": "leaf",   "tail": "dragon", "extra": "",       "line": "Grow, grow, grow!" },
+    { "id": "luma",    "name": "Luma",    "kind": "moon moth","body": "#b8e3ff", "belly": "#eef8ff", "ear": "antenna","tail": "none",   "extra": "wings",  "line": "Moon-tastic!" },
+    { "id": "marlo",   "name": "Marlo",   "kind": "otter",    "body": "#8b6a52", "belly": "#e6cfb5", "ear": "bear",   "tail": "long",   "extra": "",       "line": "Splish splash, well done!" },
+    { "id": "fig",     "name": "Fig",     "kind": "kitten",   "body": "#9a8fb3", "belly": "#ece6f6", "ear": "cat",    "tail": "long",   "extra": "",       "line": "Purr-fect!" },
+    { "id": "quill",   "name": "Quill",   "kind": "porcupine","body": "#a08770", "belly": "#efe0cf", "ear": "spikes", "tail": "none",   "extra": "",       "line": "Sharp thinking!" },
+    { "id": "basil",   "name": "Basil",   "kind": "badger",   "body": "#8a8f99", "belly": "#f1f1f1", "ear": "bear",   "tail": "none",   "extra": "stripe", "line": "Badge of honor!" },
+    { "id": "poppy",   "name": "Poppy",   "kind": "red panda","body": "#d0612f", "belly": "#fbe0c9", "ear": "cat",    "tail": "stripe", "extra": "",       "line": "Pop-pop-hooray!" },
+    { "id": "tansy",   "name": "Tansy",   "kind": "lamb",     "body": "#fff7ef", "belly": "#ffffff", "ear": "lamb",   "tail": "pom",    "extra": "fluff",  "line": "Baa-rilliant!" },
+    { "id": "rumble",  "name": "Rumble",  "kind": "baby dragon","body": "#8a7cf0","belly": "#e2ddff", "ear": "horns",  "tail": "dragon", "extra": "wings",  "line": "Roar-some!" },
+    { "id": "skye",    "name": "Skye",    "kind": "bluebird", "body": "#6fb4f2", "belly": "#e6f3ff", "ear": "tuft",   "tail": "none",   "extra": "wings",  "line": "Tweet tweet, so sweet!" },
+    { "id": "dot",     "name": "Dot",     "kind": "ladybug",  "body": "#e9524a", "belly": "#2b2b2b", "ear": "antenna","tail": "none",   "extra": "spots",  "line": "Lucky us!" },
+    { "id": "coral",   "name": "Coral",   "kind": "seal pup", "body": "#c8d3dc", "belly": "#f4f8fb", "ear": "none",   "tail": "none",   "extra": "whiskers","line": "Seal of approval!" },
+    { "id": "bramble", "name": "Bramble", "kind": "wolf pup", "body": "#8796ad", "belly": "#e8edf4", "ear": "fox",    "tail": "fluffy", "extra": "",       "line": "Awoo! Awesome!" },
+    { "id": "twig",    "name": "Twig",    "kind": "raccoon",  "body": "#9a9aa6", "belly": "#efeff3", "ear": "cat",    "tail": "stripe", "extra": "mask",   "line": "Sneaky smart!" },
+    { "id": "sunny",   "name": "Sunny",   "kind": "duckling", "body": "#ffd84d", "belly": "#fff2b3", "ear": "tuft",   "tail": "none",   "extra": "beak",   "line": "Quack-tastic!" },
+    { "id": "mallow",  "name": "Mallow",  "kind": "snow cub", "body": "#f1f6ff", "belly": "#ffffff", "ear": "bear",   "tail": "none",   "extra": "fluff",  "line": "Cool as snow!" },
+    { "id": "remy",    "name": "Remy",    "kind": "puppy",    "body": "#e0b07a", "belly": "#fff0dc", "ear": "floppy", "tail": "curl",   "extra": "",       "line": "Woof! Good job!" },
+    { "id": "zephyr",  "name": "Zephyr",  "kind": "axolotl",  "body": "#ffb3c9", "belly": "#ffe6ee", "ear": "frills", "tail": "long",   "extra": "",       "line": "Swim-sational!" },
+    { "id": "orla",    "name": "Orla",    "kind": "owlet",    "body": "#c9a37c", "belly": "#f7e8d3", "ear": "tuft",   "tail": "none",   "extra": "wings",  "line": "Whooo's amazing? You!" },
+    { "id": "kip",     "name": "Kip",     "kind": "koala",    "body": "#a9adb8", "belly": "#eef0f4", "ear": "mouse",  "tail": "none",   "extra": "nose",   "line": "Koala-fied genius!" }
+  ]
+}
