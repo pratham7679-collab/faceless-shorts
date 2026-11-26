@@ -1,0 +1,50 @@
+Dream Quest: Kids Learning - voiceover script (EXACT text spoken in dream-quest-ad-1080x1920.mp4)
+Voice: Kokoro-82M "af_heart" (warm US female, parent-narrator), speed 0.98. Times = measured start-end in the final audio.
+
+
+[1 HOOK]
+  0.90-  2.52  Homework battles every night?
+  3.02-  5.12  The sighs, the tears, the "I can't do it."
+
+[2 THE TURN]
+  6.02-  7.83  What if learning felt like an adventure?
+
+[3 TITLE]
+  8.53-  9.39  Dream Quest.
+  9.64- 11.32  Learning that grows with your child.
+
+[4 HERO]
+ 11.92- 15.02  First, you set up their hero, with a hero name only.
+ 15.37- 17.54  Then they dress up their very own avatar.
+
+[5 BUDDY]
+ 18.04- 20.21  Next, they pick a buddy, like Hoot the owl.
+ 20.51- 22.02  Hoot hatches, cheers them on,
+ 22.02- 26.29  and grows right alongside them, from Hatchling, to Explorer, to Guardian.
+
+[6 DREAM BOOK]
+ 26.84- 29.23  At story time, a Dream Book reads to them,
+ 29.56- 32.94  then asks a little quiz. And there's a new story every week.
+
+[7 MATH MISSION]
+ 33.49- 37.89  Today's mission, Counting Comets: five math puzzles, at just their level.
+ 38.24- 39.94  Solved! Dream Orbs earned,
+ 40.27- 42.96  Hoot does a happy dance, and the Dream Path keeps glowing.
+
+[8 WISE OWL]
+ 43.51- 48.05  Stuck? Wise Owl explains it patiently, like a kind teacher on call,
+ 48.42- 51.15  and even grades homework with gentle star feedback.
+
+[9 PARENT]
+ 51.74- 57.12  And for you, behind a parent PIN, a weekly report of what your child learned this week.
+ 57.52- 60.76  No ads. No strangers. Kid safe by design.
+
+[10 PRICE]
+ 61.36- 64.60  Four ninety-nine, once. No subscription. No ads.
+
+[11 END CARD (held to 76.2 s)]
+ 65.30- 66.16  Dream Quest.
+ 66.41- 68.09  Learning that grows with your child.
+ 68.54- 71.18  Coming soon. Be one of the first families in.
+
+Total video duration: 76.20 s

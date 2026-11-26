@@ -1,0 +1,28 @@
+{
+ "voice": "af_heart", "speed": 0.98, "lead": 0.9, "outro": 4.6, "gap": 0.42,
+ "lines": [
+  {"text": "Homework battles every night?", "gap": 0.5},
+  {"text": "The sighs, the tears, the \"I can't do it.\"", "gap": 0.9},
+  {"text": "What if learning felt like an adventure?", "gap": 0.7},
+  {"text": "Dream Quest.", "gap": 0.25},
+  {"text": "Learning that grows with your child.", "gap": 0.6},
+  {"text": "First, you set up their hero, with a hero name only.", "gap": 0.35},
+  {"text": "Then they dress up their very own avatar.", "gap": 0.5},
+  {"text": "Next, they pick a buddy, like Hoot the owl.", "gap": 0.3},
+  {"text": "Hoot hatches, cheers them on,"},
+  {"text": "and grows right alongside them, from Hatchling, to Explorer, to Guardian.", "gap": 0.55},
+  {"text": "At story time, a Dream Book reads to them,"},
+  {"text": "then asks a little quiz. And there's a new story every week.", "gap": 0.55},
+  {"text": "Today's mission, Counting Comets: five math puzzles, at just their level.", "gap": 0.35},
+  {"text": "Solved! Dream Orbs earned,"},
+  {"text": "Hoot does a happy dance, and the Dream Path keeps glowing.", "gap": 0.55},
+  {"text": "Stuck? Wise Owl explains it patiently, like a kind teacher on call,"},
+  {"text": "and even grades homework with gentle star feedback.", "gap": 0.6},
+  {"text": "And for you, behind a parent PIN, a weekly report of what your child learned this week.", "gap": 0.4},
+  {"text": "No ads. No strangers. Kid safe by design.", "gap": 0.6},
+  {"text": "Four ninety-nine, once. No subscription. No ads.", "gap": 0.7},
+  {"text": "Dream Quest.", "gap": 0.25},
+  {"text": "Learning that grows with your child.", "gap": 0.45},
+  {"text": "Coming soon. Be one of the first families in."}
+ ]
+}
